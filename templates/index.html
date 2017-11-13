@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  {% block head %}
+  <title>{% block title%}{% endblock%} - Resume</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Favicon -->
+  <link rel="icon" href="{{ url_for('static', filename='img/songbase-favicon.png') }}" type="image/x-icon"/>
+  <link rel="shortcut icon" href="{{ url_for('static', filename='img/songbase-favicon.png') }}" type="image/x-icon"/>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+  <!-- Fontawesome CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Songbase CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/songbase.css') }}">
+  {% endblock%}
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+         <img src="{{ url_for('static', filename='img/songbase-logo.png') }}"
+          alt="Alexis Newton" width="150">
+       </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+               <span class="sr-only">(current)</span>
+             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+{% block page_content%}
+  <section class="resume-section p-3 p-lg-5 d-flex d-column" id="about">
+    <div class="my-auto">
+      <h1 class="mb-0">Alexis
+        <span class="text-primary">Newton</span>
+      </h1>
+      <div class="subheading mb-5">4509 Griffin Dr · Wilmington, DE 19808 · (302) 650-8332 ·
+        <a href="mailto:name@email.com">anewton@udel.edu</a>
+      </div>
+      <div class="profile-pic">
+        <img style="border-radius: 50%" src="static/img/profile.jpg"
+         alt="Alexis Newton" width="150">
+      </div>
+      <p class="mb-5"></p>
+      <ul class="list-inline list-social-icons mb-0">
+        <li class="list-inline-item">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <a href="https://www.facebook.com/alexis.newton03" target="_blank"><i class="fa fa-facebook fa-stack-1x fa-inverse"></i></a>
+            </span>
+        </li>
+        <li class="list-inline-item">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <a href="https://www.linkedin.com/in/alexis-newton-492281100/" target="_blank"><i class="fa fa-linkedin fa-stack-1x fa-inverse"></i></a>
+            </span>
+        </li>
+        <li class="list-inline-item">
+            <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <a href="https://github.com/anewton03/" target="_blank"><i class="fa fa-github fa-stack-1x fa-inverse"></i></a>
+            </span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  {% for category, message in get_flashed_messages(with_categories=true) %}
+    <div class="alert alert-{{category}}">
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+      {{ message }}
+    </div>
+  {% endfor %}
+  {% endblock%}
+
+  {% block scripts%}
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  {% endblock%}
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<head>
+  <title>About</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="/">
+         <img src="{{ url_for('static', filename='static/img/profile.jpg') }}"
+          alt="Alexis Newton" width="150">
+       </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home
+               <span class="sr-only">(current)</span>
+             </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/courses">Courses</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="container-fluid p-0">
+
+
+  <!-- Page Content -->
+  <div class="container">
+    <h1 class="mt-5"><i class="fa fa-address-card-o" aria-hidden="true"></i> About Me</h1>
+    <p>This project is developed by <a id="developer" href="https://github.com/anewton03" data-toggle="tooltip" data-placement="top" title="Once upon a time this guy was a pretty good developer :)">Alexis Newton</a>.</p>
+  </div>
+
+  <a href="https://www.facebook.com/alexis.newton03" target="_blank"><i class="fa fa-facebook"></i></a>
+  <a href="https://www.instagram.com/__fignewton/" target="_blank"><i class="fa fa-instagram"></i></a>
+
+<div>
+  <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="education">
+    <div class="my-auto">
+      <h2 class="mb-5">Education</h2>
+
+      <div class="resume-item d-flex flex-column flex-md-row mb-5">
+        <div class="resume-content mr-auto">
+          <h3 class="mb-0">University of Delware</h3>
+          <div class="subheading mb-3">Bachelor of Science</div>
+          <div>Management Information Systems</div>
+          <p>GPA: 2.8</p>
+        </div>
+        <div class="resume-date text-md-right">
+          <span class="text-primary">August 2014 - May 2019</span>
+        </div>
+      </div>
+
+      <div class="resume-item d-flex flex-column flex-md-row">
+        <div class="resume-content mr-auto">
+          <h3 class="mb-0">Thomas McKean High School</h3>
+          <div class="subheading mb-3"></div>
+          <p>GPA: 3.6</p>
+        </div>
+        <div class="resume-date text-md-right">
+          <span class="text-primary">August 2010 - June 2014</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="skills">
+    <div class="my-auto">
+      <h2 class="mb-5">Skills</h2>
+
+      <div class="subheading mb-3">Programming Languages &amp; Tools</div>
+      <ul class="list-inline list-icons">
+        <li>HTML/CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Flask</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="interests">
+    <div class="my-auto">
+      <h2 class="mb-5">Interests</h2>
+      <p>Apart from being a web developer, I enjoy spending my time playing with puppies along with traveling.</p>
+      <p class="mb-0">When at home, I enjoy watching some of my favorite TV shows, including Greys Anatomy and This Is Us.</p>
+    </div>
+  </section>
+
+  <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="awards">
+    <div class="my-auto">
+      <h2 class="mb-5">Awards &amp; Certifications</h2>
+      <ul class="fa-ul mb-0">
+        <li>
+          <i class="fa-li fa fa-trophy text-warning"></i>
+          Deans List Spring 2017</li>
+      </ul>
+    </div>
+  </section>
+
+</div>
+
+  <script>
+  $(document).ready(function () {
+    $('#developer').tooltip()
+  });
+  </script>
+</div>
+</body>
